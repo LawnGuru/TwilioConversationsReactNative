@@ -8,6 +8,7 @@
 
 import React, { useState } from 'react';
 import {
+  Alert,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -63,6 +64,7 @@ const App = () => {
         client.on('stateChanged', (state) => {
             if (state === 'initialized') {
               console.log('twilio conversations initalized')
+              Alert.alert("It works!");
               resolve();
             } else if (state === 'failed') {
               console.error('twilio conversations failed initializing')
@@ -73,7 +75,8 @@ const App = () => {
       const messages = await client.getMessages()
       console.log('messages', messages)
     } catch (e) {
-      console.log('error', e);
+      Alert.alert(`Error initializing twilio client. Please check the log. ${error}`);
+      console.error(e);
     }
   }
 
@@ -88,7 +91,10 @@ const App = () => {
           init(state.token)
         } else throw `Could not get service id: ${state.error}`
       })
-      .catch(error => console.log(error))
+      .catch(error => {
+        Alert.alert(`Error getting the token! Please check the log. ${error}`);
+        console.error(error)
+      })
 
   }
 
@@ -102,7 +108,7 @@ const App = () => {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Section title="To invoke the twilio conversation press the button bellow!">
+          <Section title="To invoke the twilio conversation, press the button bellow!">
             <TouchableOpacity
               onPress={() => getToken()}
               style={{ backgroundColor: 'blue' }}>
