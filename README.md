@@ -76,4 +76,4 @@ This project was bootstrapped with the command:
 
 # Expected error
 
-![expected error](https://imgur.com/a/Pk0Z0VX)
+![expected error](https://i.imgur.com/wgReTQ8.png)
