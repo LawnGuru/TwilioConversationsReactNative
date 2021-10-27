@@ -54,12 +54,15 @@ This project was bootstrapped with the command:
     Connect your Android with an USB cable or launch an Android emulator with Android Studio, then run:
 
     ```bash
+    adb reverse tcp:8082 tcp:8082
     npm run android
     ```
 
     Connect your iOs with a lightning cable or launch an iPhone emulator with XCode, then run:
 
     ```bash
+    cd ios
+    pod install
     npm run ios
     ```
 
@@ -70,3 +73,7 @@ This project was bootstrapped with the command:
    ```
    logs/2021-10-27T17_30_16_062Z-debug.log
    ```
+
+# Expected error
+
+![expected error](https://imgur.com/a/Pk0Z0VX)
