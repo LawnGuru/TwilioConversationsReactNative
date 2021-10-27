@@ -1,4 +1,4 @@
-# React application with Express server
+# React Native application with Express server
 
 This project was bootstrapped with the command:
 
@@ -66,6 +66,7 @@ This project was bootstrapped with the command:
 ## Logs for commands
 
 1. The log for the command *npm install --save @twilio/conversations* can be found in the file 
+
    ```
    logs/2021-10-27T17_30_16_062Z-debug.log
    ```
