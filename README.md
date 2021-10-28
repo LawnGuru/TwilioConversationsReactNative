@@ -71,7 +71,7 @@ This project was bootstrapped with the command:
 1. The log for the command *npm install --save @twilio/conversations* can be found in the file 
 
    ```
-   logs/2021-10-27T17_30_16_062Z-debug.log
+   logs/2021-10-28T11_46_46_024Z-debug.log
    ```
 
 # Expected error
